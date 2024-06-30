@@ -275,6 +275,13 @@ CapsLock & t:: Send ^t
 CapsLock & l:: Send ^l
 CapsLock & w:: Send ^w
  
+CapsLock & h::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+    Send {BS}
+  Return
+
 CapsLock & d::
   If is_target()
     Send %A_ThisHotkey%
